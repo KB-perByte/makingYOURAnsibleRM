@@ -1,6 +1,6 @@
 # THE RESOURCE MODULE DOC
 
-## Is your model ready?
+### Is your model ready?
 
 ```
 git clone https://github.com/ansible-network/resource_module_models.git
@@ -16,12 +16,12 @@ Once the above repo is cloned go to the desired collection and add your model th
 
 ## Let’s get started with the Resource Module development.
 
-At first, we would need a builder for our whole code base to get scaffolded from a tool -
-
-cli_rm_builder
+At first, we would need a builder for our whole code base to get scaffolded from a tool - `cli_rm_builder`
 
 ```
-git clone https://github.com/ansible-network/cli_rm_builder.git
+pip install ansible-base
+
+ansible-galaxy collection install git+https://github.com/ansible-network/cli_rm_builder.git
 ```
 
 The collection _dir_ should have the following structure, follow the Github _namespaces_ for the setup under ansible collection
@@ -49,7 +49,7 @@ Once the cli_rm_builder and the target collection repo is cloned in the desired 
 Using the tool to generate the base-level code with which we proceed.
 
 ```
-❯cat rm_builder_run.yml
+❯ cat rm_builder_run.yml
 ---
 - hosts: localhost
   gather_facts: yes
