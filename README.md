@@ -10,9 +10,9 @@ Once the above repo is cloned go to the desired collection and add your model th
 
 ##### Helpful Links-
 
-[Ansible 101: Part 1: In the beginning there was YAML](https://www.redhat.com/en/blog/ansible-101-part-1-beginning-there-was-yaml)
-[YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
-[Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/)
+- [Ansible 101: Part 1: In the beginning there was YAML](https://www.redhat.com/en/blog/ansible-101-part-1-beginning-there-was-yaml)
+- [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+- [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/)
 
 ## Let’s get started with the Resource Module development.
 
@@ -73,18 +73,18 @@ Post execution of the above command there should be few new files in your branch
 
 ##### Important links at this point -
 
-- understanding RMs
-  [Ansible Network Resource Modules: Deep Dive on Return Values](https://www.ansible.com/blog/ansible-network-resource-modules-deep-dive-on-return-values)
-  [Developing network resource modules](https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html)
-  [Getting started with Route Maps Resource Modules](https://www.ansible.com/blog/getting-started-with-route-maps-resource-modules)
-  []()
+- Understanding RMs
+  - [Ansible Network Resource Modules: Deep Dive on Return Values](https://www.ansible.com/blog/ansible-network-resource-modules-deep-dive-on-return-values)
+  - [Developing network resource modules](https://docs.ansible.com/ansible/latest/network/dev_guide/developing_resource_modules_network.html)
+  - [Getting started with Route Maps Resource Modules](https://www.ansible.com/blog/getting-started-with-route-maps-resource-modules)
+    []()
 - Debug Ansible resource module
-  [Debugging Ansible Network Modules with VSCode](https://docs.google.com/document/d/1KtgzLG8N4cyQ35NunaxaM_Gl37gFd0LObTtq6kRlLK4/edit)
-  [Debugging modules](https://docs.ansible.com/ansible/latest/dev_guide/debugging.html)
+  - [Debugging Ansible Network Modules with VSCode](https://docs.google.com/document/d/1KtgzLG8N4cyQ35NunaxaM_Gl37gFd0LObTtq6kRlLK4/edit)
+  - [Debugging modules](https://docs.ansible.com/ansible/latest/dev_guide/debugging.html)
 - Setup development environment
-  [Setting up Virtual Environments](https://docs.google.com/document/d/1eRUDIHZ6IYEegP9Z6HrhqWeGezM4n_8Pdxe8u-2TqN8/edit#heading=h.9qznvm65fex6)
-  [Creation Of Virtual environment & Ansible Installation](https://github.com/rohitthakur2590/ansible-dev-virtualenv)
-  []()
+  - [Setting up Virtual Environments](https://docs.google.com/document/d/1eRUDIHZ6IYEegP9Z6HrhqWeGezM4n_8Pdxe8u-2TqN8/edit#heading=h.9qznvm65fex6)
+  - [Creation Of Virtual environment & Ansible Installation](https://github.com/rohitthakur2590/ansible-dev-virtualenv)
+    []()
 
 # Introduction to RM files -
 
@@ -139,11 +139,11 @@ y
 ##### Helpful Links
 
 - Regex parsers
-  [Pythex Regex parser](https://pythex.org/)
-  [Regex101](https://regex101.com/)
+  - [Pythex Regex parser](https://pythex.org/)
+  - [Regex101](https://regex101.com/)
 - Jinja2 parsers
-  [J2 Live Parser](http://jinja.quantprogramming.com/)
-  [Ansible Template Tester](https://ansible.sivel.net/test/)
+  - [J2 Live Parser](http://jinja.quantprogramming.com/)
+  - [Ansible Template Tester](https://ansible.sivel.net/test/)
 
 `Logging_global.py` - the \_config file contains all the core logic of how the execution should behave in various states. In here you get _want_ [the playbook] and _have_ [the config that came from the facts rendered]
 All the states and their comparison logic goes here.
@@ -329,11 +329,11 @@ Let’s talk about the different [states](https://docs.ansible.com/ansible/lates
 ##### Some important links at this point-
 
 - Parsing semi-structured text with Ansible
-  [Parsing the CLI](https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html)
+  - [Parsing the CLI](https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html)
 - Working with command output and prompts in network modules
-  [Handling prompts](https://docs.ansible.com/ansible/latest/network/user_guide/network_working_with_command_output.html)
+  - [Handling prompts](https://docs.ansible.com/ansible/latest/network/user_guide/network_working_with_command_output.html)
 - Network Debug and Troubleshooting Guide
-  [Debugging network Modules](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
+  - [Debugging network Modules](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html)
 
 ## Conclusion
 
@@ -343,9 +343,9 @@ A comparison of two dictionary of dictionaries is easier and more efficient than
 
 ##### Example list to dict :
 
-[\_route_maps_list_to_dict](https://github.com/ansible-collections/cisco.nxos/blob/main/plugins/module_utils/network/)
-[\_bgp_global_list_to_dict](https://github.com/ansible-collections/arista.eos/blob/main/plugins/module_utils/network/eos/config/bgp_global/bgp_global.py#L365-L396)
-[\_bgp_list_to_dict](https://github.com/ansible-collections/cisco.iosxr/blob/main/plugins/module_utils/network/iosxr/config/bgp_global/bgp_global.py#L376-L407)
+- nxos.route_maps [\_route_maps_list_to_dict](https://github.com/ansible-collections/cisco.nxos/blob/main/plugins/module_utils/network/)
+- eos.bpg_global [\_bgp_global_list_to_dict](https://github.com/ansible-collections/arista.eos/blob/main/plugins/module_utils/network/eos/config/bgp_global/bgp_global.py#L365-L396)
+- iosxr.bgp_global [\_bgp_list_to_dict](https://github.com/ansible-collections/cisco.iosxr/blob/main/plugins/module_utils/network/iosxr/config/bgp_global/bgp_global.py#L376-L407)
 
 With the config development in place, there are few things to keep a note of to make the code clean and reusable by the rest of the modules within the same platform,
 
